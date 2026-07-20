@@ -1,5 +1,110 @@
+/* Color Palette & Base Variables */
+:root {
+  --primary-color: #f39c12; /* Construction Yellow/Gold */
+  --dark-color: #1a252f;    /* Deep Slate/Navy */
+  --light-bg: #f8f9fa;      /* Clean Off-White */
+  --accent-color: #e67e22;  /* Warm Orange */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
 .hero {
   height: 80vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  background: linear-gradient(rgba(26, 37, 47, 0.75), rgba(26, 37, 47, 0.75)),
               url('../images/hero.jpg') center/cover no-repeat;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Custom Buttons */
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Section Headings */
+.section-title {
+  position: relative;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Service & Project Cards */
+.card-custom {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-custom img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Contact Info Box */
+.info-box {
+  background-color: var(--light-bg);
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-color);
 }
